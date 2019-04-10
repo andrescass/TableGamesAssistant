@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_tutti_frutti"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorGreenBackgroundDark"
+    android:orientation="vertical"
+    android:weightSum="20"
     tools:context="com.camacuasoft.asisentedejuegos.Activities.TuttiFruttiActivity">
 
     <LinearLayout
@@ -14,6 +16,7 @@
         android:orientation="horizontal"
         android:weightSum="10"
         android:layout_margin="5dp"
+        android:layout_weight="1"
         android:background="@color/colorGreenBackgroundDark">
 
         <TextView
@@ -21,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:text="A B C D"
             android:textColor="@color/colorPrimaryTextLight"/>
 
@@ -31,30 +34,24 @@
             android:layout_height="wrap_content"
             android:layout_weight="8"
             android:gravity="center"
-            android:textSize="24dp"
+            android:textSize="24sp"
             android:text="05:00"
             android:textColor="@color/colorPrimaryText"
             android:background="@color/colorPrimaryLight"/>
     </LinearLayout>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/tutifruti_top_layout"
-        android:background="@color/colorGreenBackground"
-        android:id="@+id/tutifruti_frame">
 
         <TextView
             android:id="@+id/tutifruti_current_letter"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:textSize="300dp"
+            android:textSize="200sp"
             android:text="A"
             android:fontFamily="casual"
-            android:textColor="@color/colorPrimaryTextLight"/>
+            android:layout_weight="19"
+            android:textColor="@color/colorPrimaryTextLight"
+            />
 
-    </FrameLayout>
 
 
-</RelativeLayout>
+</LinearLayout>
